@@ -36,4 +36,4 @@ if __name__ == "__main__":
     start = time.time()
     sorted(x)
     end = time.time()
-    print "other sort took: ", end-start
+    print "timsort took: ", end-start

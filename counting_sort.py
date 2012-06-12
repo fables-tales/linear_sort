@@ -7,16 +7,9 @@ def counting_sort(array):
     for x in array:
         counts[x] += 1
 
-    total = 0
-    for i in range(0,k+1):
-        c = counts[i]
-        counts[i] = total
-        total = total + c
-
-    output = [0]*len(array)
-    for x in array:
-        output[counts[x]] = x
-        counts[x] = counts[x] + 1
+    output = []
+    for x in xrange(k+1):
+        output += [x]*counts[x]
 
     return output
 
